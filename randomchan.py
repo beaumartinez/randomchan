@@ -5,7 +5,6 @@ from re import sub
 
 from lxml.html import fromstring
 import requests
-from requests.auth import OAuth1
 
 
 FRONT_PAGE_TEMPLATE = 'http://api.4chan.org/{}/0.json'
