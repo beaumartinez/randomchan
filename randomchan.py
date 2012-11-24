@@ -99,5 +99,3 @@ def random_formatted_tweetable_post(board):
     post = choice(posts)
 
     return post
-
-
