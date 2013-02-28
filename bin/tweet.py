@@ -9,6 +9,7 @@ path.insert(0, '.')
 
 from randomchan import random_formatted_tweetable_post
 
+
 def _tweet(content):
     client_key = u'El04Ou8ZJPhBtmJeCf2KA'
     client_secret = u'iiLjxG0cpf9TL7lyJEeuQOxm87fUWnMwzpXxjLEK8E'
@@ -24,6 +25,7 @@ def _tweet(content):
                              }, auth=oauth)
 
     print response.status_code, response.content
+
 
 if __name__ == '__main__':
     post = random_formatted_tweetable_post('v')
