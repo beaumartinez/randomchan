@@ -46,7 +46,7 @@ def get_posts(board):
 
     response = requests.get(url)
 
-    threads = response.json
+    threads = response.json()
     threads = threads['threads']
     threads = imap(lambda x: x['posts'], threads)
 
