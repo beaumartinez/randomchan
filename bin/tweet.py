@@ -11,7 +11,7 @@ from randomchan import random_formatted_tweetable_post
 
 
 def _tweet(keys, content):
-    oauth = OAuth1(*keys, signature_type='auth_header')
+    oauth = OAuth1(*keys)
 
     response = requests.post('https://api.twitter.com/1.1/statuses/'
                              'update.json', data={
