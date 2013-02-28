@@ -76,13 +76,13 @@ def get_posts(board):
 
 def get_tweetable_posts(board):
     '''Return all tweetable posts (those whose content is less than or equal
-    to 140 characters) of the board's front page.
+    to 118 characters) of the board's front page.
 
     '''
     posts = get_posts(board)
 
     posts = ifilter(lambda x: x['content'], posts)
-    posts = ifilter(lambda x: len(x['content']) <= 140, posts)
+    posts = ifilter(lambda x: len(x['content']) <= 118, posts)
 
     return posts
 

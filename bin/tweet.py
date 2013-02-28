@@ -29,4 +29,6 @@ def _tweet(content):
 
 if __name__ == '__main__':
     post = random_formatted_tweetable_post('v')
+    post = '{} #4chan #Shit4chanSays'.format(post)
+
     _tweet(post)
