@@ -3,7 +3,7 @@
 from sys import argv, path
 
 import requests
-from requests_oauth import OAuth1
+from requests_oauthlib import OAuth1
 
 path.insert(0, '.')
 
