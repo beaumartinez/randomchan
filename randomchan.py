@@ -75,14 +75,14 @@ def get_posts(board):
 
 
 def get_tweetable_posts(board):
-    '''Return all tweetable posts (those whose content is less than 120
-    characters) of the board's front page.
+    '''Return all tweetable posts (those whose content is less than or equal
+    to 140 characters) of the board's front page.
 
     '''
     posts = get_posts(board)
 
     posts = ifilter(lambda x: x['content'], posts)
-    posts = ifilter(lambda x: len(x['content']) < 120, posts)
+    posts = ifilter(lambda x: len(x['content']) <= 140, posts)
 
     return posts
 
@@ -93,7 +93,7 @@ def random_formatted_tweetable_post(board):
 
     '''
     posts = get_tweetable_posts(board)
-    posts = map(lambda x: u'{} {}'.format(x['content'], x['url']), posts)
+    posts = tuple(post['content'] for post in posts)
 
     post = choice(posts)
 
